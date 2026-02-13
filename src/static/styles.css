@@ -82,23 +82,53 @@ section h3 {
 
 .participants-list {
   margin-top: 8px;
-  padding-left: 22px;
+  padding-left: 0;
   color: #444;
-  list-style: disc outside;
-  /* make the list a bit more spacious */
-  gap: 6px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .participant-item {
-  margin-bottom: 8px;
+  margin-bottom: 0;
   font-size: 14px;
-  padding: 6px 10px;
+  padding: 8px 12px;
   background: linear-gradient(180deg, #eef3ff 0%, #e6ecff 100%);
   border: 1px solid #d6e4ff;
   border-radius: 8px;
-  display: list-item;
-  list-style-position: outside;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset;
+}
+
+.participant-email {
+  color: #1a237e;
+  font-weight: 600;
+  font-size: 14px;
+  word-break: break-all;
+}
+
+.remove-participant {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-weight: 700;
+  font-size: 14px;
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.12s, color 0.12s;
+}
+
+.remove-participant:hover {
+  background: rgba(198,40,40,0.08);
+  color: #a12222;
 }
 
 .no-participants {
