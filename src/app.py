@@ -20,6 +20,7 @@ app.mount("/static", StaticFiles(directory=os.path.join(Path(__file__).parent,
           "static")), name="static")
 
 # In-memory activity database
+// ...existing code...
 activities = {
     "Chess Club": {
         "description": "Learn strategies and compete in chess tournaments",
@@ -38,8 +39,45 @@ activities = {
         "schedule": "Mondays, Wednesdays, Fridays, 2:00 PM - 3:00 PM",
         "max_participants": 30,
         "participants": ["john@mergington.edu", "olivia@mergington.edu"]
+    },
+    "Soccer Team": {
+        "description": "Competitive soccer training and interschool matches",
+        "schedule": "Mondays and Thursdays, 4:00 PM - 6:00 PM",
+        "max_participants": 22,
+        "participants": ["liam@mergington.edu", "noah@mergington.edu"]
+    },
+    "Basketball Club": {
+        "description": "Skills practice and friendly games",
+        "schedule": "Wednesdays and Fridays, 4:30 PM - 6:00 PM",
+        "max_participants": 16,
+        "participants": ["ava@mergington.edu", "isabella@mergington.edu"]
+    },
+    "Art Club": {
+        "description": "Explore drawing, painting and mixed media",
+        "schedule": "Tuesdays, 3:30 PM - 5:00 PM",
+        "max_participants": 18,
+        "participants": ["mia@mergington.edu", "ella@mergington.edu"]
+    },
+    "Drama Club": {
+        "description": "Acting, stagecraft and school productions",
+        "schedule": "Thursdays, 3:30 PM - 5:30 PM",
+        "max_participants": 25,
+        "participants": ["jack@mergington.edu", "lucas@mergington.edu"]
+    },
+    "Math Olympiad": {
+        "description": "Problem solving and preparation for competitions",
+        "schedule": "Fridays, 3:30 PM - 5:00 PM",
+        "max_participants": 15,
+        "participants": ["sophia@mergington.edu", "oliver@mergington.edu"]
+    },
+    "Science Club": {
+        "description": "Experiments, projects and science fairs",
+        "schedule": "Wednesdays, 3:30 PM - 5:00 PM",
+        "max_participants": 20,
+        "participants": ["charlotte@mergington.edu", "amelia@mergington.edu"]
     }
 }
+# ...existing code...
 
 
 @app.get("/")
